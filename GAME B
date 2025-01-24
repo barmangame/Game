@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۱۰ بازی اندروید برتر</title>
+    <style>
+        /* استایل‌های کلی */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            transition: background 0.5s ease;
+        }
+        .welcome-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .welcome-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .welcome-container input {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 300px;
+        }
+        .welcome-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .welcome-container button:hover {
+            background: #218838;
+        }
+        .game-list {
+            display: none; /* ابتدا مخفی است */
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .game-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .game-card h2 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #007BFF;
+        }
+        .game-card p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0 0 15px;
+        }
+        .game-card a {
+            display: inline-block;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        .game-card a:hover {
+            background: #0056b3;
+        }
+        .game-card a.download-link {
+            background: #28a745;
+            margin-left: 10px;
+        }
+        .game-card a.download-link:hover {
+            background: #218838;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 100%;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .color-picker {
+            margin-top: 20px;
+        }
+        .color-picker button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+        .color-picker button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- صفحه خوش‌آمدگویی -->
+    <div class="welcome-container" id="welcome-container">
+        <h1>به سایت ۱۰ بازی اندروید برتر خوش آمدید!</h1>
+        <input type="text" id="username" placeholder="نام خود را وارد کنید" required>
+        <button onclick="enterSite()">ورود به سایت</button>
+    </div>
+
+    <!-- صفحه اصلی (ابتدا مخفی است) -->
+    <div class="game-list" id="game-list">
+        <h1 id="welcome-message"></h1>
+        <!-- انتخاب رنگ -->
+        <div class="color-picker">
+            <button onclick="changeBackground('#6a11cb', '#2575fc')">بنفش</button>
+            <button onclick="changeBackground('#ff6f61', '#ffcc00')">نارنجی</button>
+            <button onclick="changeBackground('#00b09b', '#96c93d')">سبز</button>
+            <button onclick="changeBackground('#ff416c', '#ff4b2b')">قرمز</button>
+            <button onclick="changeBackground('#1e3c72', '#2a5298')">آبی</button>
+        </div>
+
+        <!-- بازی ۱ -->
+        <div class="game-card">
+            <h2>۱. PUBG Mobile</h2>
+            <p>یک بازی بتل رویال با گرافیک عالی و گیم‌پلی جذاب.</p>
+            <a href="https://www.farsroid.com/game/pubg-mobile/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://www.pubgmobile.com" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۲ -->
+        <div class="game-card">
+            <h2>۲. Call of Duty: Mobile</h2>
+            <p>یک بازی اکشن با حالت‌های چندنفره و بتل رویال.</p>
+            <a href="https://www.farsroid.com/game/call-of-duty-mobile/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://www.callofduty.com/mobile" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۳ -->
+        <div class="game-card">
+            <h2>۳. Genshin Impact</h2>
+            <p>یک بازی نقش‌آفرینی با دنیای باز و گرافیک خیره‌کننده.</p>
+            <a href="https://www.farsroid.com/game/genshin-impact/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://genshin.mihoyo.com" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۴ -->
+        <div class="game-card">
+            <h2>۴. Among Us</h2>
+            <p>یک بازی چندنفره اجتماعی با موضوع فضانوردی و خیانت.</p>
+            <a href="https://www.farsroid.com/game/among-us/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://www.innersloth.com/games/among-us/" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۵ -->
+        <div class="game-card">
+            <h2>۵. Clash Royale</h2>
+            <p>یک بازی استراتژیک با ترکیبی از کارت‌ها و مسابقات آنلاین.</p>
+            <a href="https://www.farsroid.com/game/clash-royale/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://supercell.com/en/games/clashroyale/" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۶ -->
+        <div class="game-card">
+            <h2>۶. Minecraft</h2>
+            <p>یک بازی ماجراجویی با دنیایی بی‌نهایت و خلاقانه.</p>
+            <a href="https://www.farsroid.com/game/minecraft/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://www.minecraft.net" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۷ -->
+        <div class="game-card">
+            <h2>۷. Free Fire</h2>
+            <p>یک بازی بتل رویال سریع و پرطرفدار.</p>
+            <a href="https://www.farsroid.com/game/free-fire/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://ff.garena.com" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۸ -->
+        <div class="game-card">
+            <h2>۸. Asphalt 9: Legends</h2>
+            <p>یک بازی مسابقه‌ای با گرافیک بالا و ماشین‌های اسپورت.</p>
+            <a href="https://www.farsroid.com/game/asphalt-9-legends/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://www.gameloft.com/game/asphalt-9" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۹ -->
+        <div class="game-card">
+            <h2>۹. Clash of Clans</h2>
+            <p>یک بازی استراتژیک با ساخت پایگاه و حمله به دیگر بازیکنان.</p>
+            <a href="https://www.farsroid.com/game/clash-of-clans/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://supercell.com/en/games/clashofclans/" target="_blank">سایت رسمی</a>
+        </div>
+
+        <!-- بازی ۱۰ -->
+        <div class="game-card">
+            <h2>۱۰. Subway Surfers</h2>
+            <p>یک بازی دونده بی‌پایان با گرافیک رنگارنگ و جذاب.</p>
+            <a href="https://www.farsroid.com/game/subway-surfers/" target="_blank" class="download-link">دانلود مستقیم</a>
+            <a href="https://sybo.com/games" target="_blank">سایت رسمی</a>
+        </div>
+    </div>
+
+    <!-- فوتر (پایین صفحه) -->
+    <div class="footer" id="footer" style="display: none;">
+        <p>ساخته شده توسط: <strong>بارمان بوالحسنی</strong></p>
+        <p>شماره تماس: <a href="tel:0905573079">۰۹۰۵۵۷۳۰۷۹</a></p>
+        <p>درباره من: من یک توسعه‌دهنده وب و علاقه‌مند به تکنولوژی هستم. این سایت به عنوان نمونه‌ای از کارهای من ساخته شده است.</p>
+        <p>لینک دانلود سایت من: <a href="https://example.com" target="_blank">دانلود کنید</a></p>
+        <!-- لینک توییتر -->
+        <p>صفحه توییتر من: <a href="https://x.com/barmanb2011" target="_blank">x.com/barmanb2011</a></p>
+    </div>
+
+    <script>
+        // تابع برای تغییر رنگ پس‌زمینه
+        function changeBackground(color1, color2) {
+            document.body.style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
+        }
+
+        // تابع برای ورود به سایت
+        function enterSite() {
+            const username = document.getElementById('username').value;
+            if (username) {
+                // مخفی کردن صفحه خوش‌آمدگویی
+                document.getElementById('welcome-container').style.display = 'none';
+                // نمایش صفحه اصلی
+                document.getElementById('game-list').style.display = 'flex';
+                // نمایش فوتر
+                document.getElementById('footer').style.display = 'block';
+                // نمایش پیام خوش‌آمدگویی
+                document.getElementById('welcome-message').innerText = `${username} عزیز، به سایت ۱۰ بازی اندروید برتر خوش آمدید!`;
+            } else {
+                alert('لطفاً نام خود را وارد کنید.');
+            }
+        }
+    </script>
+</body>
+</html>
